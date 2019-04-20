@@ -4,10 +4,20 @@
 // The parameter of accum is a string which includes only letters from a..z and A..Z.
 
 function accum(param) {
-  let parArray = param.split("");
+  let parArray = param.toLowerCase().split("");
+  let result = "";
   parArray.forEach((letter, i) => {
-    console.log(letter, i);
+    if (i === 0) {
+      result += letter.toUpperCase();
+    } else {
+      result += `-${letter.toUpperCase()}`;
+      for (let x = 0; x < i; x++) {
+        result += letter;
+      }
+    }
   });
+  return result;
 }
 
-accum("abcd");
+console.log(accum("abcd"));
+console.log(accum("RqAEzty"));

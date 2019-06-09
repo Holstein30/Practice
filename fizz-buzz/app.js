@@ -8,7 +8,7 @@ for (let i = 1; i < 101; i++) {
 }
 
 function fizzBuzz() {
-  nums.map(num => {
+  nums.forEach(num => {
     if (num % 3 === 0 && num % 5 === 0) {
       console.log("fizzbuzz");
     } else if (num % 3 === 0) {

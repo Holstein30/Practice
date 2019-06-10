@@ -26,3 +26,5 @@ const fibonacci = () => {
 };
 
 fibonacci();
+
+// I'll be honest I had to look most of this one up. I fiddled around forever without being able to generate the basic sequence. Once I could do that I was able to figure the rest out on my own.

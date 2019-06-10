@@ -8,13 +8,18 @@
 const fibonacci = () => {
   let first = 0;
   let second = 1;
+  let result = 0;
 
   for (let i = 0; i < 10; i++) {
     const sum = first + second;
-    console.log(sum);
+    if (sum % 2 === 0) {
+      result += sum;
+    }
     first = second;
     second = sum;
   }
+  console.log(result);
+  return result;
 };
 
 fibonacci();

@@ -10,10 +10,13 @@ const fibonacci = () => {
   let second = 1;
   let result = 0;
 
-  for (let i = 0; i < 4000000; i++) {
+  for (let i = 0; ; i++) {
     const sum = first + second;
     if (sum % 2 === 0) {
       result += sum;
+    }
+    if (sum > 4000000) {
+      break;
     }
     first = second;
     second = sum;

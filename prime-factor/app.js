@@ -44,4 +44,4 @@ let maxPrimeFactor = num => {
   return maxPrime;
 };
 
-console.log(maxPrimeFactor(13195));
+console.log(maxPrimeFactor(600851475143));

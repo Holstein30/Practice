@@ -1,4 +1,4 @@
-// Project Euler problem 3
+// Proiect Euler problem 3
 // What is the largest prime factor of the number 600851475143
 
 // Prime = Only divisible by itself and one
@@ -15,13 +15,29 @@ let getFactors = num => {
       factors.push(i);
     }
   }
-  getPrimeFactors(factors);
+  return factors;
 };
 
-let getPrimeFactors = factors => {
-  factors.forEach(num => {
-    console.log(num);
+let isPrime = factor => {
+  for (let i = 2; i < factor; i++) {
+    if (factor % i === 0) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+};
+
+let maxPrimeFactor = num => {
+  let factors = getFactors(num);
+  factors.forEach(factor => {
+    if (isPrime(factor)) {
+      primeFactors.push(factor);
+    }
   });
+
+  let maxPrime = Math.max(primeFactors);
+  return maxPrime;
 };
 
-getFactors(10);
+console.log(maxPrimeFactor(10));

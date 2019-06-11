@@ -8,13 +8,20 @@
 
 let primeFactors = [];
 
-let getPrimeFactors = num => {
+let getFactors = num => {
+  let factors = [];
   for (let i = 0; i < num; i++) {
     if (num % i === 0) {
-      primeFactors.push(i);
+      factors.push(i);
     }
   }
-  console.log(primeFactors);
+  getPrimeFactors(factors);
 };
 
-getPrimeFactors(10);
+let getPrimeFactors = factors => {
+  factors.forEach(num => {
+    console.log(num);
+  });
+};
+
+getFactors(10);

@@ -40,7 +40,7 @@ let maxPrimeFactor = num => {
   });
   console.log(primeFactors);
 
-  let maxPrime = Math.max(primeFactors);
+  let maxPrime = Math.max(...primeFactors);
   return maxPrime;
 };
 

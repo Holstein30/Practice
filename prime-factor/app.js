@@ -4,7 +4,9 @@
 // Prime = Only divisible by itself and one
 // Factors = number that goes into another number (ie: 5 is a factor of 25)
 
-// First need to write a function that determines all prime factors of a given number -
+// First need to write a function that determines all factors of a given number
+// Next need to determine if factors are prime
+// Last need to determine which prime factor is the largest
 
 let primeFactors = [];
 
@@ -19,13 +21,14 @@ let getFactors = num => {
 };
 
 let isPrime = factor => {
+  let prime = true;
   for (let i = 2; i < factor; i++) {
     if (factor % i === 0) {
-      return false;
-    } else {
-      return true;
+      prime = false;
+      break;
     }
   }
+  return prime;
 };
 
 let maxPrimeFactor = num => {
@@ -35,9 +38,10 @@ let maxPrimeFactor = num => {
       primeFactors.push(factor);
     }
   });
+  console.log(primeFactors);
 
   let maxPrime = Math.max(primeFactors);
   return maxPrime;
 };
 
-console.log(maxPrimeFactor(10));
+console.log(maxPrimeFactor(13195));

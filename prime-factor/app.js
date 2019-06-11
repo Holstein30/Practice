@@ -12,7 +12,7 @@ let primeFactors = [];
 
 let getFactors = num => {
   let factors = [];
-  for (let i = 0; i < num; i++) {
+  for (let i = 1; i < num; i += 2) {
     if (num % i === 0) {
       factors.push(i);
     }
@@ -38,10 +38,12 @@ let maxPrimeFactor = num => {
       primeFactors.push(factor);
     }
   });
-  console.log(primeFactors);
 
   let maxPrime = Math.max(...primeFactors);
   return maxPrime;
 };
 
-console.log(maxPrimeFactor(600851475143));
+console.log(maxPrimeFactor(6008514751));
+
+// I believe the calculations are technically correct - however the performance is terrible and will not calculate super large numbers (so far ~6 billion is the highest that completed).
+// Needs major refactor

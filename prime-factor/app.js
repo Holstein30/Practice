@@ -9,11 +9,12 @@
 let primeFactors = [];
 
 let getPrimeFactors = num => {
-  let emptyArray = new Array(num);
-
-  emptyArray.forEach(i => {
-    console.log(i);
-  });
+  for (let i = 0; i < num; i++) {
+    if (num % i === 0) {
+      primeFactors.push(i);
+    }
+  }
+  console.log(primeFactors);
 };
 
 getPrimeFactors(10);

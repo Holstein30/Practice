@@ -44,7 +44,7 @@ let maxPrimeFactor = num => {
 };
 
 console.time("maxPrimeFactor");
-console.log(maxPrimeFactor(6008514751));
+console.log(maxPrimeFactor(600851475143));
 console.timeEnd("maxPrimeFactor");
 
 // I believe the calculations are technically correct - however the performance is terrible and will not calculate super large numbers (so far ~6 billion is the highest that completed).

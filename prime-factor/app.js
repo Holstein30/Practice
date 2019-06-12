@@ -12,6 +12,7 @@ let primeFactors = [];
 
 let getFactors = num => {
   let factors = [];
+  // comparing square root equivalency to num divided by 2 (since anything above that value isn't a factor), then increasing i by 2 (since even numbers aren't prime)
   for (let i = 1; i * i < num / 2; i += 2) {
     if (num % i === 0) {
       factors.push(i);
@@ -47,5 +48,4 @@ console.time("maxPrimeFactor");
 console.log(maxPrimeFactor(600851475143));
 console.timeEnd("maxPrimeFactor");
 
-// I believe the calculations are technically correct - however the performance is terrible and will not calculate super large numbers (so far ~6 billion is the highest that completed).
-// Needs major refactor
+// Solution can definitely be improved upon

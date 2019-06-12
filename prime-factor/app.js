@@ -12,7 +12,7 @@ let primeFactors = [];
 
 let getFactors = num => {
   let factors = [];
-  for (let i = 1; i < num / 2; i += 2) {
+  for (let i = 1; i * i < num / 2; i += 2) {
     if (num % i === 0) {
       factors.push(i);
     }

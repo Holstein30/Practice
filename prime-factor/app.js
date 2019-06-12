@@ -49,3 +49,4 @@ console.log(maxPrimeFactor(600851475143));
 console.timeEnd("maxPrimeFactor");
 
 // Solution can definitely be improved upon
+// How about starting from the value passed in and evaluating each factor as they come in. So the first one that evaluates as Prime would be the largest prime. Should be miles faster.

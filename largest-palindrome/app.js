@@ -20,10 +20,26 @@ const isPalindrome = num => {
   return palidromeBool;
 };
 
-const result1 = isPalindrome(9393);
-const result2 = isPalindrome(101);
-const result3 = isPalindrome(99);
-const result4 = isPalindrome(9009);
-const result5 = isPalindrome(564765);
+// Need products for all pairs of 2 3-digit numbers -
+
+const threeDigitProduct = () => {
+  for (let i = 999; i > 0; ) {
+    for (let j = 999; j > 0; j--) {
+      if (isPalindrome(i * j)) {
+        return `${i} times ${j} = ${i * j} which is a Palindrome`;
+      }
+      if (j === 1) {
+        i--;
+        j = 999;
+      }
+    }
+  }
+};
+
+const result1 = threeDigitProduct();
+const result2 = threeDigitProduct();
+const result3 = threeDigitProduct();
+const result4 = threeDigitProduct();
+const result5 = threeDigitProduct();
 
 console.log(result1, result2, result3, result4, result5);

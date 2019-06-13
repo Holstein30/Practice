@@ -20,7 +20,7 @@ const isPalindrome = num => {
   return palidromeBool;
 };
 
-// Need products for all pairs of 2 3-digit numbers -
+// Need products for all pairs of 2 3-digit numbers that are palindromes
 
 const threeDigitProduct = () => {
   for (let i = 999; i > 0; ) {
@@ -36,6 +36,6 @@ const threeDigitProduct = () => {
   }
 };
 
-const result1 = threeDigitProduct();
+const result = threeDigitProduct();
 
-console.log(result1);
+console.log(result);

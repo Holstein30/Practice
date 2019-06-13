@@ -5,3 +5,14 @@
 // First I need to write a function to figure out if a number is a palindrome.
 // Next I will need to get the products of all pairs of two 3-digit numbers
 // Then I will need to check each product for whether it is a palindrome or not
+
+// How to check if palindrome. Could create 2 arrays off the number (1 normal and 1 reversed) then loop through and compare them.
+
+const isPalindrome = num => {
+  const numArray = num.toString().split("");
+  const reverseNumArray = numArray.slice().reverse();
+  console.log(numArray);
+  console.log(reverseNumArray);
+};
+
+isPalindrome(9393);

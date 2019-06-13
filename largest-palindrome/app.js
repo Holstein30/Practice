@@ -37,9 +37,5 @@ const threeDigitProduct = () => {
 };
 
 const result1 = threeDigitProduct();
-const result2 = threeDigitProduct();
-const result3 = threeDigitProduct();
-const result4 = threeDigitProduct();
-const result5 = threeDigitProduct();
 
-console.log(result1, result2, result3, result4, result5);
+console.log(result1);

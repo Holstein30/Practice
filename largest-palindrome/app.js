@@ -11,8 +11,19 @@
 const isPalindrome = num => {
   const numArray = num.toString().split("");
   const reverseNumArray = numArray.slice().reverse();
-  console.log(numArray);
-  console.log(reverseNumArray);
+  let palidromeBool = true;
+  for (let i = 0; i < numArray.length; i++) {
+    if (numArray[i] != reverseNumArray[i]) {
+      palidromeBool = false;
+    }
+  }
+  return palidromeBool;
 };
 
-isPalindrome(9393);
+const result1 = isPalindrome(9393);
+const result2 = isPalindrome(101);
+const result3 = isPalindrome(99);
+const result4 = isPalindrome(9009);
+const result5 = isPalindrome(564765);
+
+console.log(result1, result2, result3, result4, result5);

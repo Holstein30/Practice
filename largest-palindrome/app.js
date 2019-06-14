@@ -36,4 +36,8 @@ const threeDigitProduct = () => {
   console.log(`Largest Palindrome: ${largestPalindrome}`);
 };
 
+console.time("threeDigitProduct");
 threeDigitProduct();
+console.timeEnd("threeDigitProduct");
+
+// taking roughly ~200ms - likely able to be improved

@@ -23,15 +23,17 @@ const isPalindrome = num => {
 // Need products for all pairs of 2 3-digit numbers that are palindromes
 
 const threeDigitProduct = () => {
+  let largestPalindrome = 0;
   for (let i = 999; i > 99; i--) {
     for (let j = 999; j > 99; j--) {
       if (isPalindrome(i * j)) {
-        return `${i} times ${j} = ${i * j} which is a Palindrome`;
+        if (largestPalindrome < i * j) {
+          largestPalindrome = i * j;
+        }
       }
     }
   }
+  console.log(`Largest Palindrome: ${largestPalindrome}`);
 };
 
-const result = threeDigitProduct();
-
-console.log(result);
+threeDigitProduct();

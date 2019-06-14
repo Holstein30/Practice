@@ -24,16 +24,22 @@ const isPalindrome = num => {
 
 const threeDigitProduct = () => {
   let largestPalindrome = 0;
+  let firstDigit;
+  let lastDigit;
   for (let i = 999; i > 99; i--) {
     for (let j = 999; j > 99; j--) {
       if (isPalindrome(i * j)) {
         if (largestPalindrome < i * j) {
           largestPalindrome = i * j;
+          firstDigit = i;
+          lastDigit = j;
         }
       }
     }
   }
-  console.log(`Largest Palindrome: ${largestPalindrome}`);
+  console.log(
+    `${firstDigit} times ${lastDigit} = ${largestPalindrome} which is the largest palindrome`
+  );
 };
 
 console.time("threeDigitProduct");

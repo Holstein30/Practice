@@ -7,6 +7,14 @@
 
 function reverse(string) {
   const stringArr = string.split("");
+  const reversedArr = [];
+  for (let i = stringArr.length - 1; i >= 0; i--) {
+    reversedArr.push(stringArr[i]);
+  }
+  return String(reversedArr);
 }
 
-reverse("abcdef");
+const test = reverse("abcdef");
+const test2 = reverse("bobby");
+const test3 = reverse("random");
+console.log({ test, test2, test3 });

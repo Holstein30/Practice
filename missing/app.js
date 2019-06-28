@@ -2,7 +2,15 @@
 
 function missing(arr) {
   const sortedArr = arr.sort();
-  console.log(sortedArr);
+  let missingNum;
+  sortedArr.every((value, i) => {
+    let newIndex = i + 1;
+    if (value != newIndex) {
+      missingNum = newIndex;
+      return false;
+    } else return true;
+  });
+  console.log(missingNum);
 }
 // First need to sort the array
 // Create a variable to hold the missing number
@@ -14,3 +22,4 @@ missing([1, 4, 3]); // 2
 missing([2, 3, 4]); // 1
 missing([5, 1, 4, 2]); // 3
 missing([1, 2, 3, 4]); // undefined
+missing([1, 6, 3, 5, 2]); // 4

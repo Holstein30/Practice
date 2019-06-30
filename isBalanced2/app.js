@@ -15,16 +15,10 @@ function isBalanced2(variable) {
     return false;
   }
   let startStack = [];
-  let startStack2 = [];
-  let startStack3 = [];
   let balancedBool = false;
   const balanced = bracesArray.forEach(element => {
-    if (element === "{") {
+    if (element === "{" || element === "(" || element === "[") {
       startStack.push(element);
-    } else if (element === "(") {
-      startStack2.push(element);
-    } else if (element === "[") {
-      startStack3.push(element);
     }
     if (element === "}") {
       if (startStack.pop() === "{") {
@@ -33,13 +27,13 @@ function isBalanced2(variable) {
         balancedBool = false;
       }
     } else if (element === ")") {
-      if (startStack2.pop() === "(") {
+      if (startStack.pop() === "(") {
         balancedBool = true;
       } else {
         balancedBool = false;
       }
     } else if (element === "]") {
-      if (startStack3.pop() === "[") {
+      if (startStack.pop() === "[") {
         balancedBool = true;
       } else {
         balancedBool = false;
@@ -52,5 +46,6 @@ function isBalanced2(variable) {
 const test1 = isBalanced2("(foo { bar (baz) [boo] })"); // true
 const test2 = isBalanced2("foo { bar { baz }"); // false
 const test3 = isBalanced2("foo { (bar [baz] } )"); // false
+const test4 = isBalanced2("(({[]}))()[{[{}]}]"); // true
 
-console.log({ test1, test2, test3 });
+console.log({ test1, test2, test3, test4 });

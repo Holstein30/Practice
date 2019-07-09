@@ -21,5 +21,10 @@ function squaresOfSum() {
   return squaredSum;
 }
 
-sumOfSquares();
-squaresOfSum();
+function differenceOfSums() {
+  return squaresOfSum() - sumOfSquares();
+}
+
+const answer = differenceOfSums();
+
+console.log(answer);

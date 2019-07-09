@@ -12,7 +12,14 @@ for (let i = 1; i <= 100; i++) {
 function sumOfSquares() {
   const squareNums = oneHundred.map(num => Math.pow(num, 2));
   const sum = squareNums.reduce((acc, val) => acc + val);
-  console.log(sum);
+  return sum;
+}
+
+function squaresOfSum() {
+  const sum = oneHundred.reduce((acc, val) => acc + val);
+  const squaredSum = Math.pow(sum, 2);
+  return squaredSum;
 }
 
 sumOfSquares();
+squaresOfSum();

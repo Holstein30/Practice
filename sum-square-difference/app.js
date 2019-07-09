@@ -3,3 +3,16 @@
 
 // Could use an array and map over the numbers.
 // 3 functions - sum of squares, square of sum, and difference.
+
+const oneHundred = [];
+for (let i = 1; i <= 100; i++) {
+  oneHundred.push(i);
+}
+
+function sumOfSquares() {
+  const squareNums = oneHundred.map(num => Math.pow(num, 2));
+  const sum = squareNums.reduce((acc, val) => acc + val);
+  console.log(sum);
+}
+
+sumOfSquares();

@@ -22,9 +22,24 @@ let numSequence = `73167176531330624919225119674426574742355349194934
 05886116467109405077541002256983155200055935729725
 71636269561882670428252483600823257530420752963450`;
 
-let numSequenceString = numSequence
+let numSequenceArray = numSequence
   .split("\n")
   .join("")
   .split("")
   .map(Number);
-console.log(numSequenceString);
+
+function largestAdjacentNumbers(consecutiveLength) {
+  let largestProduct = 0;
+
+  for (var i = 0; i <= numSequenceArray.length - consecutiveLength; i++) {
+    combination = numSequenceArray.slice(i, i + consecutiveLength);
+    if (!combination.includes(0)) {
+      const product = combination.reduce((a, b) => a * b);
+      if (largestProduct < product) largestProduct = product;
+    }
+  }
+
+  return largestProduct;
+}
+
+console.log(largestAdjacentNumbers(13));

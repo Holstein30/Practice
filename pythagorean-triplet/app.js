@@ -10,7 +10,30 @@ function isPytha(a, b, c) {
   return false;
 }
 
-const pythBool = isPytha(3, 4, 5);
-const pythBool2 = isPytha(2, 3, 6);
+// Next lets find the sets of triplets that equal 1000 and test them
 
-console.log({ pythBool, pythBool2 });
+function pythaLoop() {
+  const pythagArray = [];
+  let a = 1;
+  let b = 2;
+  let c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+  let sum = a + b + c;
+  while (sum != 1001) {
+    if (sum > 1000) {
+      a++;
+      b = a + 1;
+    } else {
+      b++;
+    }
+    let c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+    sum = a + b + c;
+    if (sum === 1000 && isPytha(a, b, c)) {
+      pythagArray.push(a, b, c, isPytha(a, b, c));
+      break;
+    }
+  }
+  return pythagArray;
+}
+
+const answer = pythaLoop();
+console.log(answer);

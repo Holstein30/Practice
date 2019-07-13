@@ -5,8 +5,6 @@
 // Then need a way to efficiently loop up to 2 million
 // Can add those primes to an array and use the ruduce method
 
-const primes = [2];
-
 let isPrime = factor => {
   for (let i = 2; i <= Math.floor(Math.sqrt(factor)); i++) {
     if (factor % i === 0) {
@@ -17,15 +15,16 @@ let isPrime = factor => {
 };
 
 let getPrimes = num => {
+  const primes = [2];
   for (let i = 3; i < num; i += 2) {
     if (isPrime(i)) {
       primes.push(i);
     }
   }
-  return primeSum();
+  return primeSum(primes);
 };
 
-let primeSum = () => {
+let primeSum = primes => {
   return primes.reduce((a, b) => a + b, 0);
 };
 

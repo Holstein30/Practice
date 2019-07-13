@@ -8,18 +8,16 @@
 const primes = [2];
 
 let isPrime = factor => {
-  let prime = true;
-  for (let i = 2; i < factor; i++) {
+  for (let i = 2; i <= Math.floor(Math.sqrt(factor)); i++) {
     if (factor % i === 0) {
-      prime = false;
-      break;
+      return false;
     }
   }
-  return prime;
+  return true;
 };
 
-let getPrimes = () => {
-  for (let i = 3; i < 10; i += 2) {
+let getPrimes = num => {
+  for (let i = 3; i < num; i += 2) {
     if (isPrime(i)) {
       primes.push(i);
     }
@@ -31,4 +29,7 @@ let primeSum = () => {
   return primes.reduce((a, b) => a + b, 0);
 };
 
-console.log(getPrimes());
+console.log(getPrimes(10));
+console.time("getPrimes");
+console.log(getPrimes(2000000));
+console.timeEnd("getPrimes");

@@ -17,7 +17,35 @@ const obj2 = {
 function equivProps(a, b) {
   const keys1 = Object.keys(a);
   const keys2 = Object.keys(b);
-  console.log({ keys1, keys2 });
+  if (keys1.length < keys2.length) {
+    return false;
+  }
+  let compareBool = false;
+  const keysCompare = keys1.forEach(key => {
+    if (keys2.includes(key)) {
+      return (compareBool = true);
+    }
+  });
+  return compareBool;
 }
 
-equivProps(obj1, obj2);
+console.log(equivProps(obj1, obj2)); // true
+
+console.log(
+  equivProps(
+    { age: 25, hair: "long", beard: true },
+    { hair: "long", beard: true }
+  )
+); // true
+console.log(
+  equivProps(
+    { hair: "long", beard: true },
+    { age: 25, hair: "long", beard: true }
+  )
+); // false
+console.log(
+  equivProps(
+    { hair: "long", beard: true },
+    { age: 26, hair: "long", beard: true }
+  )
+); // false

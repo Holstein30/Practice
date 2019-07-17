@@ -3,14 +3,15 @@
 // You may assume that each input would have exactly one solution, and you may not use the same element twice.
 
 const twoSum = (arr, target) => {
-  let tmp = arr[0];
-  const res = arr.map(num => {
-    console.log(tmp + num);
-    if (tmp + num === target) {
-      return `${tmp} + ${num} = ${target}`;
+  const res = [];
+  arr.filter((num, i) => {
+    if (num + arr[i + 1] === target) {
+      res.push(i);
+      res.push(i + 1);
+      return;
     }
   });
-  console.log(res);
+  return res;
 };
 
 const test = twoSum([2, 7, 11, 15], 9);

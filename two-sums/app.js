@@ -4,10 +4,10 @@
 
 const twoSum = (nums, target) => {
   const res = [];
-  nums.forEach(num => {
-    nums.forEach(num2 => {
+  nums.forEach((num, i) => {
+    nums.forEach((num2, i2) => {
       if (num + num2 === target && res.length === 0) {
-        res.push(num, num2);
+        res.push(i, i2);
       }
     });
   });

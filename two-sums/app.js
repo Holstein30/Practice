@@ -1,15 +1,15 @@
-// Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+// Given an arrsay of integers, return indices of the two numbers such that they add up to a specific target.
 
 // You may assume that each input would have exactly one solution, and you may not use the same element twice.
 
-const twoSum = (arr, target) => {
+const twoSum = (nums, target) => {
   const res = [];
-  arr.filter((num, i) => {
-    if (num + arr[i + 1] === target) {
-      res.push(i);
-      res.push(i + 1);
-      return;
-    }
+  nums.forEach(num => {
+    nums.forEach(num2 => {
+      if (num + num2 === target && res.length === 0) {
+        res.push(num, num2);
+      }
+    });
   });
   return res;
 };

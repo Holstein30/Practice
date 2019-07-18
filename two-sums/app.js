@@ -6,7 +6,7 @@ const twoSum = (nums, target) => {
   const res = [];
   nums.forEach((num, i) => {
     nums.forEach((num2, i2) => {
-      if (num + num2 === target && res.length === 0) {
+      if (num + num2 === target && res.length === 0 && i != i2) {
         res.push(i, i2);
       }
     });
@@ -15,5 +15,6 @@ const twoSum = (nums, target) => {
 };
 
 const test = twoSum([2, 7, 11, 15], 9);
+const test2 = twoSum([3, 2, 4], 6);
 
-console.log(test);
+console.log({ test, test2 });

@@ -8,6 +8,14 @@ function lengthOfLongestSubstring(s) {
   let windowCharsMap = {};
   let windowStart = 0;
   let maxLength = 0;
+
+  for (let i = 0; i < s.length; i++) {
+    const endChar = s[i];
+
+    if (windowCharsMap[endChar] >= windowStart) {
+      windowsStart = windowCharsMap[endChar] + 1;
+    }
+  }
 }
 
 module.exports = lengthOfLongestSubstring;

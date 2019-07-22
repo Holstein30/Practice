@@ -13,7 +13,7 @@ function lengthOfLongestSubstring(s) {
     const endChar = s[i];
 
     if (windowCharsMap[endChar] >= windowStart) {
-      windowsStart = windowCharsMap[endChar] + 1;
+      windowStart = windowCharsMap[endChar] + 1;
     }
 
     windowCharsMap[endChar] = i;

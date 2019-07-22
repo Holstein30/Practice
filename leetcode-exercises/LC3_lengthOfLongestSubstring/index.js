@@ -15,6 +15,8 @@ function lengthOfLongestSubstring(s) {
     if (windowCharsMap[endChar] >= windowStart) {
       windowsStart = windowCharsMap[endChar] + 1;
     }
+
+    windowCharsMap[endChar] = i;
   }
 }
 

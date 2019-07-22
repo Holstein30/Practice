@@ -5,10 +5,9 @@
 // lengthOfLongestSubstring("bbbbb") --> 1 since length of "b"
 
 function lengthOfLongestSubstring(s) {
-  const sArray = s.split("");
-  console.log(sArray);
+  let windowCharsMap = {};
+  let windowStart = 0;
+  let maxLength = 0;
 }
-
-lengthOfLongestSubstring("abcabcbb");
 
 module.exports = lengthOfLongestSubstring;

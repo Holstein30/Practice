@@ -4,18 +4,22 @@
 // longestPalindrome("abba") --> "abba"
 // longestPalindrome("a") --> "a"
 
-function longestPalindrome(s) {
-  const isPalindrome = num => {
-    const numArray = num.toString().split("");
-    const reverseNumArray = numArray.slice().reverse();
-    let palidromeBool = true;
-    for (let i = 0; i < numArray.length; i++) {
-      if (numArray[i] != reverseNumArray[i]) {
-        palidromeBool = false;
-      }
+function longestPalindrome(s) {}
+
+const isPalindrome = num => {
+  const numArray = num.split("");
+  const reverseNumArray = numArray.slice().reverse();
+  let palidromeBool = true;
+  for (let i = 0; i < numArray.length; i++) {
+    if (numArray[i] != reverseNumArray[i]) {
+      palidromeBool = false;
     }
-    return palidromeBool;
-  };
-}
+  }
+  console.log(palidromeBool);
+  return palidromeBool;
+};
+
+isPalindrome("cbbd");
+isPalindrome("abba");
 
 module.exports = longestPalindrome;

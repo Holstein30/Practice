@@ -21,7 +21,7 @@ function longestPalindrome(s) {
   }
 
   for (let i = 0; i < s.length; i++) {
-    expandAroundMiddle(i - 1, i + 2);
+    expandAroundMiddle(i - 1, i + 1);
     expandAroundMiddle(i, i + 1);
   }
 

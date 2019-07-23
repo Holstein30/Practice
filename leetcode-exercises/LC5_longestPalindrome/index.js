@@ -24,6 +24,8 @@ function longestPalindrome(s) {
     expandAroundMiddle(i - 1, i + 2);
     expandAroundMiddle(i, i + 1);
   }
+
+  return s.slice(startIndex, startIndex + maxLength);
 }
 
 module.exports = longestPalindrome;

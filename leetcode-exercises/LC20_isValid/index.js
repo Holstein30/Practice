@@ -10,6 +10,8 @@ const isValid = s => {
     } else if (pairsHashMap[stack.pop()] !== char) {
       return false;
     }
+
+    return stack.length === 0;
   }
 };
 

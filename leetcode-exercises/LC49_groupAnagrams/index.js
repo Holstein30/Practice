@@ -1,3 +1,5 @@
-function groupAnagrams(strs) {}
+function groupAnagrams(strs) {
+  let grouped = {};
+}
 
 module.exports = groupAnagrams;

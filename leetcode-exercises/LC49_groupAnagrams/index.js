@@ -11,6 +11,8 @@ function groupAnagrams(strs) {
     if (!grouped[key]) {
       grouped[key] = [];
     }
+
+    grouped[key].push(word);
   }
 }
 

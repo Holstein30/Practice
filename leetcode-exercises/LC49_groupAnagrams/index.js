@@ -7,6 +7,10 @@ function groupAnagrams(strs) {
       .split("")
       .sort()
       .join("");
+
+    if (!grouped[key]) {
+      grouped[key] = [];
+    }
   }
 }
 

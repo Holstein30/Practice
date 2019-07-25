@@ -14,6 +14,8 @@ function groupAnagrams(strs) {
 
     grouped[key].push(word);
   }
+
+  return Object.values(grouped);
 }
 
 module.exports = groupAnagrams;

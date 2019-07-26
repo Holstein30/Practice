@@ -9,6 +9,8 @@ function isPalindrome(s) {
     if (s[left] !== s[right]) {
       return false;
     }
+    left++;
+    right--;
   }
 }
 

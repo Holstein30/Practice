@@ -1,13 +1,6 @@
 function isPalindrome(s) {
-  const stringArray = s.split("");
-  const reverseStringArray = stringArray.slice().reverse();
-  let palidromeBool = true;
-  for (let i = 0; i < stringArray.length; i++) {
-    if (stringArray[i] != reverseStringArray[i]) {
-      palidromeBool = false;
-    }
-  }
-  return palidromeBool;
+  // Sanitize the input string
+  s = s.toLowerCase().replace(/[\W_]/g, "");
 }
 
 module.exports = isPalindrome;

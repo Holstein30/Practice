@@ -12,6 +12,8 @@ function isPalindrome(s) {
     left++;
     right--;
   }
+
+  return true;
 }
 
 module.exports = isPalindrome;

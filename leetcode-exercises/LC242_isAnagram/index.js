@@ -21,6 +21,8 @@ function isAnagram(s, t) {
       sCharCounts[tChar]--;
     }
   }
+
+  return true;
 }
 
 module.exports = isAnagram;

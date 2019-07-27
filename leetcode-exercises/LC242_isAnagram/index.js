@@ -10,6 +10,17 @@ function isAnagram(s, t) {
     const sChar = s[i];
     sCharCounts[sChar] = sCharCounts[sChar] + 1 || 1;
   }
+
+  // Loop over t string
+  for (let i = 0; i < t.length; i++) {
+    const tChar = t[i];
+
+    if (!sCharCounts[tChar]) {
+      return false;
+    } else {
+      sCharCounts[tChar]--;
+    }
+  }
 }
 
 module.exports = isAnagram;

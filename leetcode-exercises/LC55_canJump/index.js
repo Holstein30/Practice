@@ -10,6 +10,8 @@ function canJump(nums) {
       }
     }
   }
+
+  return dpPositions;
 }
 
 module.exports = canJump;

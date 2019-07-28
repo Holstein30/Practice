@@ -11,7 +11,7 @@ function canJump(nums) {
     }
   }
 
-  return dpPositions;
+  return dpPositions[dpPositions.length - 1];
 }
 
 module.exports = canJump;

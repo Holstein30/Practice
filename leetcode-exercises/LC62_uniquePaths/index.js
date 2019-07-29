@@ -1,7 +1,7 @@
 function uniquePaths(m, n) {
   const dpMatrix = [];
 
-  for (let row = 0; row <= n; row++) {
+  for (let row = 1; row <= n; row++) {
     dpMatrix.push([]);
   }
 
@@ -18,6 +18,12 @@ function uniquePaths(m, n) {
       dpMatrix[row][col] = dpMatrix[row][col - 1] + dpMatrix[row - 1][col];
     }
   }
+
+  console.log(dpMatrix);
+
+  return dpMatrix[dpMatrix.length - 1][m - 1];
 }
+
+uniquePaths(4, 6);
 
 module.exports = uniquePaths;

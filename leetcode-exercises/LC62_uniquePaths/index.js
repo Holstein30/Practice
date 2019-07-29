@@ -1,3 +1,5 @@
-function uniquePaths(m, n) {}
+function uniquePaths(m, n) {
+  const dpMatrix = [];
+}
 
 module.exports = uniquePaths;

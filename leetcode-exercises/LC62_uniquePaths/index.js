@@ -12,6 +12,12 @@ function uniquePaths(m, n) {
   for (let col = 0; col < m; col++) {
     dpMatrix[0][col] = 1;
   }
+
+  for (let row = 1; row < n; row++) {
+    for (let col = 1; col < m; col++) {
+      dpMatrix[row][col] = dpMatrix[row][col - 1] + dpMatrix[row - 1][col];
+    }
+  }
 }
 
 module.exports = uniquePaths;

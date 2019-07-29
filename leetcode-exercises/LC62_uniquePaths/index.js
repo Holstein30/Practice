@@ -19,11 +19,7 @@ function uniquePaths(m, n) {
     }
   }
 
-  console.log(dpMatrix);
-
   return dpMatrix[dpMatrix.length - 1][m - 1];
 }
-
-uniquePaths(4, 6);
 
 module.exports = uniquePaths;

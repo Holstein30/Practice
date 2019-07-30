@@ -6,6 +6,8 @@ const climbStairs = n => {
   for (let i = 4; i <= n; i++) {
     ways.push(ways[i - 1] + ways[i - 2]);
   }
+
+  return ways;
 };
 
 module.exports = climbStairs;

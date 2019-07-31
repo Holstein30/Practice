@@ -10,6 +10,8 @@ function rob(nums) {
       Math.max(nums[i] + maxLootAtNth[i - 2], maxLootAtNth[i - 1])
     );
   }
+
+  return maxLootAtNth.pop();
 }
 
 module.exports = rob;

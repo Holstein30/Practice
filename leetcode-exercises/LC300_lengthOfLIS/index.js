@@ -10,6 +10,8 @@ function lengthOfLIS(nums) {
         dpSubsequence[j] = Math.max(dpSubsequence[i] + 1, dpSubsequence[j]);
       }
     }
+
+    maxSoFar = Math.max(maxSoFar, dpSubsequence[j]);
   }
 }
 

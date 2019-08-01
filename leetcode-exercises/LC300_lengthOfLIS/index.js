@@ -3,6 +3,14 @@ function lengthOfLIS(nums) {
 
   let dpSubsequence = new Array(nums.length).fill(1);
   let maxSoFar = 1;
+
+  for (let j = 1; j < nums.length; j++) {
+    for (let i = 0; i < j; i++) {
+      if (nums[j] > nums[i]) {
+        dpSubsequence[j] = Math.max(dpSubsequence[i] + 1, dpSubsequence[j]);
+      }
+    }
+  }
 }
 
 module.exports = lengthOfLIS;

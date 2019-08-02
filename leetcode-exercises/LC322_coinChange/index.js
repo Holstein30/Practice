@@ -10,6 +10,9 @@ function coinChange(coins, amount) {
       }
     }
   }
+
+  const answer = dpMinCoins[dpMinCoins.length - 1];
+  return answer;
 }
 
 module.exports = coinChange;

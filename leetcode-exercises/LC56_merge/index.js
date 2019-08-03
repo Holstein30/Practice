@@ -15,6 +15,7 @@ const merge = intervals => {
       res.push(currentInterval);
     }
   }
+  return res;
 };
 
 module.exports = merge;

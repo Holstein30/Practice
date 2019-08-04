@@ -7,6 +7,13 @@
 const canAttendMeetings = intervals => {
   const starts = [];
   const ends = [];
+
+  // Fill up starts and ends
+  for (let i = 0; i < intervals.length; i++) {
+    const subArray = intervals[i];
+    starts.push(subArray[0]);
+    ends.push(subArray[1]);
+  }
 };
 
 module.exports = canAttendMeetings;

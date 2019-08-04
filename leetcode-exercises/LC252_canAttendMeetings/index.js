@@ -17,6 +17,12 @@ const canAttendMeetings = intervals => {
 
   starts.sort((a, b) => a - b);
   ends.sort((a, b) => a - b);
+
+  for (let i = 0; i < starts.length; i++) {
+    if (starts[i + 1] < ends[i]) return false;
+  }
+
+  return true;
 };
 
 module.exports = canAttendMeetings;

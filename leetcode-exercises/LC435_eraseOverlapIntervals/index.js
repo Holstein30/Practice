@@ -19,6 +19,7 @@ const eraseOverlapIntervals = intervals => {
       end = intervalEnd;
     }
   }
+  return count;
 };
 
 module.exports = eraseOverlapIntervals;

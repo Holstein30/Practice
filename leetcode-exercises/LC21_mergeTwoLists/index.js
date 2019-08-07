@@ -15,6 +15,7 @@ function mergeTwoLists(l1, l2) {
     }
   }
   tail.next = l1 || l2;
+  return dummyHead.next;
 }
 
 module.exports = mergeTwoLists;

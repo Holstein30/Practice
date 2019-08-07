@@ -15,6 +15,8 @@ function removeNthFromEnd(head, n) {
   }
 
   slow.next = slow.next.next;
+
+  return dummyHead.next;
 }
 
 module.exports = removeNthFromEnd;

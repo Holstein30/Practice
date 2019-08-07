@@ -7,6 +7,12 @@ function removeNthFromEnd(head, n) {
   for (let i = 1; i <= n; i++) {
     fast = fast.next;
   }
+
+  // Move slow and fast up one node at a time until fast is at the last node
+  while (fast.next) {
+    slow = slow.next;
+    fast = fast.next;
+  }
 }
 
 module.exports = removeNthFromEnd;

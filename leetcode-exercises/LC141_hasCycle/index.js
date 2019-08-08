@@ -10,6 +10,8 @@ function hasCycle(head) {
       return true;
     }
   }
+
+  return false;
 }
 
 module.exports = hasCycle;

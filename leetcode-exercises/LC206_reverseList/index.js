@@ -7,6 +7,10 @@ const reverseList = head => {
 
     // Change direction
     current.next = prev;
+
+    // Move prev and current up by 1
+    prev = current;
+    current = temp;
   }
 };
 

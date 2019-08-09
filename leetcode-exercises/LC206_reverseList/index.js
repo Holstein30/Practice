@@ -4,6 +4,9 @@ const reverseList = head => {
 
   while (current) {
     let temp = current.next;
+
+    // Change direction
+    current.next = prev;
   }
 };
 

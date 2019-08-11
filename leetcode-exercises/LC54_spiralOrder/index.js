@@ -17,6 +17,12 @@ function spiralOrder(matrix) {
       }
       top++;
       dir = "down";
+    } else if (dir === "left") {
+      for (let i = right; i >= left; i--) {
+        spiralArray.push(matrix[bottom][i]);
+      }
+      bottom--;
+      dir = "up";
     }
   }
 }

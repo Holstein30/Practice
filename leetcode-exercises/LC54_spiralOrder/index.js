@@ -9,6 +9,16 @@ function spiralOrder(matrix) {
   let left = 0;
   let right = matrix[0].length - 1;
   let dir = "right";
+
+  while (top <= bottom && left <= right) {
+    if (dir === "right") {
+      for (let i = left; i <= right; i++) {
+        spiralArray.push(matrix[top][i]);
+      }
+      top++;
+      dir = "down";
+    }
+  }
 }
 
 module.exports = spiralOrder;

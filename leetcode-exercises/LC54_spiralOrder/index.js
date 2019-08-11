@@ -31,6 +31,7 @@ function spiralOrder(matrix) {
       dir = "right";
     }
   }
+  return spiralArray;
 }
 
 module.exports = spiralOrder;

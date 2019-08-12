@@ -4,7 +4,7 @@ function exist(board, word) {
   for (let row = 0; row < board.length; row++) {
     for (let col = 0; col < board[0].length; col++) {
       if (board[row][col] === word[0]) {
-        defaultStatus(row, col, 0, word);
+        dfs(row, col, 0, word);
       }
     }
   }
@@ -36,6 +36,8 @@ function exist(board, word) {
 
     board[row][col] = temp;
   }
+
+  return found;
 }
 
 module.exports = exist;

@@ -8,6 +8,13 @@ function exist(board, word) {
       }
     }
   }
+
+  function dfs(row, col, count, word) {
+    if (count === word.length) {
+      found = true;
+      return;
+    }
+  }
 }
 
 module.exports = exist;

@@ -1,3 +1,5 @@
-function exist(board, word) {}
+function exist(board, word) {
+  let found = false;
+}
 
 module.exports = exist;

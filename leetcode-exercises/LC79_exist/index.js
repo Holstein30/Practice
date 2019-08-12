@@ -25,6 +25,11 @@ function exist(board, word) {
     ) {
       return;
     }
+
+    let temp = board[row][col];
+    board[row][col] = "";
+
+    dfs(row, col, count + 1, word);
   }
 }
 

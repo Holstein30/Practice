@@ -15,6 +15,8 @@ function isValidBST(root) {
     healper(node.left, min, node.val);
     healper(node.left, node.val, max);
   }
+
+  helper(root, null, null);
 }
 
 module.exports = isValidBST;

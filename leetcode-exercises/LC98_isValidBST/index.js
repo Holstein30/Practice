@@ -11,6 +11,9 @@ function isValidBST(root) {
       validity = false;
       return;
     }
+
+    healper(node.left, min, node.val);
+    healper(node.left, node.val, max);
   }
 }
 

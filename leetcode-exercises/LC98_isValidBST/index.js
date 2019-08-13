@@ -13,10 +13,11 @@ function isValidBST(root) {
     }
 
     helper(node.left, min, node.val);
-    helper(node.left, node.val, max);
+    helper(node.right, node.val, max);
   }
 
   helper(root, null, null);
+  return validity;
 }
 
 module.exports = isValidBST;

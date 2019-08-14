@@ -7,6 +7,9 @@ function isSameTree(p, q) {
     } else if (!p || !q) {
       sameTree = false;
       return;
+    } else if (p.val !== q.val) {
+      sameTree = false;
+      return;
     }
   }
 }

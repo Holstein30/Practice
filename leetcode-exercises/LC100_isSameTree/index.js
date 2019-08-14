@@ -11,6 +11,9 @@ function isSameTree(p, q) {
       sameTree = false;
       return;
     }
+
+    checkSameNode(p.left, q.left);
+    checkSameNode(p.right, q.right);
   }
 }
 

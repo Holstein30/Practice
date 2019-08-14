@@ -13,8 +13,9 @@ function isSameTree(p, q) {
     }
 
     checkSameNode(p.left, q.left);
-    checkSameNode(p.right, q.right);
-  }
+    checkSa
+    
+    checkSameNode(p, q);
 }
 
 module.exports = isSameTree;

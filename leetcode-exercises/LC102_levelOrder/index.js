@@ -7,6 +7,10 @@ function levelOrder(root) {
     if (!res[depth]) {
       res[depth] = [];
     }
+
+    res[depth].push(node.val);
+    helper(node.left, depth + 1);
+    helper(node.right, depth + 1);
   }
 }
 

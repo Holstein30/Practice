@@ -1,3 +1,5 @@
-function levelOrder(root) {}
+function levelOrder(root) {
+  const res = [];
+}
 
 module.exports = levelOrder;

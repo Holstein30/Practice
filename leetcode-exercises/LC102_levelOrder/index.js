@@ -14,6 +14,7 @@ function levelOrder(root) {
   }
 
   helper(root, 0);
+  return res;
 }
 
 module.exports = levelOrder;

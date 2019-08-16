@@ -9,6 +9,8 @@ function maxDepth(root) {
     dive(node.left, currentDepth + 1);
     dive(node.right, currentDepth + 1);
   }
+
+  dive(root, 1);
 }
 
 module.exports = maxDepth;

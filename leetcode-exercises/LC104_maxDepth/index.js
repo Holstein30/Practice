@@ -11,6 +11,7 @@ function maxDepth(root) {
   }
 
   dive(root, 1);
+  return maxDepth;
 }
 
 module.exports = maxDepth;

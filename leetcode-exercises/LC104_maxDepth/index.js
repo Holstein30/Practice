@@ -7,6 +7,7 @@ function maxDepth(root) {
       return;
     }
     dive(node.left, currentDepth + 1);
+    dive(node.right, currentDepth + 1);
   }
 }
 

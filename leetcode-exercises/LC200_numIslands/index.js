@@ -9,6 +9,18 @@ function numIslands(grid) {
       }
     }
   }
+
+  function dfs(grid, row, col) {
+    if (
+      row < 0 ||
+      row >= grid.length ||
+      col < 0 ||
+      col >= grind[0].length ||
+      grid[row][col] === "0"
+    ) {
+      return;
+    }
+  }
 }
 
 module.exports = numIslands;

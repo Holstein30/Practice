@@ -15,7 +15,7 @@ function numIslands(grid) {
       row < 0 ||
       row >= grid.length ||
       col < 0 ||
-      col >= grind[0].length ||
+      col >= grid[0].length ||
       grid[row][col] === "0"
     ) {
       return;
@@ -27,6 +27,8 @@ function numIslands(grid) {
     dfs(grid, row, col - 1);
     dfs(grid, row, col + 1);
   }
+
+  return count;
 }
 
 module.exports = numIslands;

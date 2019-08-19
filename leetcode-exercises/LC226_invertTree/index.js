@@ -11,6 +11,7 @@ function invertTree(root) {
   }
 
   helper(root);
+  return root;
 }
 
 module.exports = invertTree;

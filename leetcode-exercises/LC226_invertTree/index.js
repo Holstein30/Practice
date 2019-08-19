@@ -9,6 +9,8 @@ function invertTree(root) {
     helper(node.left);
     helper(node.right);
   }
+
+  helper(root);
 }
 
 module.exports = invertTree;
